@@ -1,0 +1,11 @@
+4.1 
+База данных содержит список аэропортов практически всех крупных городов России. В большинстве городов есть только один аэропорт. Исключение составляет:
+
+SELECT DISTINCT a.city
+FROM dst_project.airports a
+GROUP BY a.city
+HAVING count(a.airport_code) > 1
+ORDER BY 1
+
+
+
